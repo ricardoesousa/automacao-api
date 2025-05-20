@@ -37,7 +37,8 @@ public class Steps {
 
     @Então("eu devo receber uma resposta com o código HTTP {}")
     public void metodo3(int codigo) {
-        System.out.println("Status Code: " + response.getStatusCode() + "\n");
+//        System.out.println("Status Code: " + response.getStatusCode() + "\n");
+        System.out.println("Response Body: " + response.jsonPath().prettyPrint());
         assertEquals(codigo, response.getStatusCode());
     }
 
